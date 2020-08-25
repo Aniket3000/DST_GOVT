@@ -1,3 +1,37 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
+}
+a{
+  font-size: 20px;
+}
 body {
   font-family: "Avenir Next";
 }
@@ -6,59 +40,24 @@ li {
   list-style: none;
 }
 
-.header {
-  background-color: #26d0c9;
-  color: #fff;
-  height: 90px;
+.logo{
+  background-color: #dee7ec;
+  height: 100px;
 }
 
-.header-logo {
-  float: left;
-  font-size: 36px;
-  padding: 20px 40px;
+.dst{
+  height: 100px;
+  width: auto;
 }
 
-.header-list li {
-  float: left;
-  padding: 33px 20px;
+.pec_logo{
+  float: right;
+  height: 100px;
+  width: auto;
 }
 
 .main {
-  padding: 100px 80px;
-}
-
-.copy-container h1 {
-  font-size: 140px;
-}
-
-.copy-container h2 {
-  font-size: 60px;
-}
-
-.copy-container span {
-  color: #ff4a4a;
-}
-
-.contents {
-  height: 500px;
-  margin-top: 100px;
-}
-
-.section-title {
-  border-bottom: 2px solid #dee7ec;
-  font-size: 28px;
-  padding-bottom: 15px;
-  margin-bottom: 50px;
-}
-
-.contents-item {
-  float: left;
-  margin-right: 40px;
-}
-
-.contents-item p {
-  font-size: 24px;
-  margin-top: 30px;
+  padding: 50px 80px;
 }
 
 .contact-form {
@@ -87,22 +86,26 @@ textarea{
   color: #889eab;
 }
 
-.footer {
+.footer-1 {
   background-color: #2f5167;
   color: #fff;
-  height: 120px;
+  height: 150px;
   padding: 40px;
 }
 
-.footer-logo {
+.footer-logo-1 {
   float: left;
-  font-size: 32px;
+  font-size: 36px;
 }
 
-.footer-list {
+.footer-list-1 {
   float: right;
 }
 
-.footer-list li {
+.footer-list-1 li {
   padding-bottom: 20px;
+}
+.footer-list-1 li > a {
+  color: #fff;
+  font-size: 20px;
 }

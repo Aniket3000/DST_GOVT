@@ -1,74 +1,201 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Progate</title>
-    <link rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body>
-    <div class="header">
-      <div class="header-logo">Progate</div>
-      <div class="header-list">
-        <ul>
-          <li>About</li>
-          <li>Lessons</li>
-          <li>Contact us</li>
-        </ul>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DST_GOVT</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="Images/dst.png" class="dst">
+    <img src="Images/peclogo.jpg" class="pec_logo">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Academicians</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Universities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opportunities</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            More
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Some</a>
+            <a class="dropdown-item" href="#">Something</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link my-2 my-lg-0 btn btn-outline-success" href="#">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <br><br><br><br>
+          <div class="filter-results">
+            <div class="card border-primary" style="max-width: 35rem;">
+              <div class="card-header display-4">Refine Results</div>
+              <div class="card-body text-primary display-6">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Indian University Name OR College Name</label>
+                    <input type="email" class="form-control" id="indianUniv" aria-describedby="emailHelp"
+                      placeholder="Enter College Name">
+                  </div>
+                  <div class="form-group">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Type</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormTypeSelect">
+                      <option selected>-Any-</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Department</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormDepartmentSelect">
+                      <option selected>-Any-</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Foreign University Name</label>
+                    <input type="email" class="form-control" id="foreignUniv" aria-describedby="emailHelp"
+                      placeholder="Enter College Name">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Apply</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm mx-auto center">
+          <h1 class="display-3">All Academicians</h1>
+          <div class="card-columns">
+            <div class="card">
+              <img class="card-img-top" src="Images/people.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Somnath</h5>
+                <p class="card-text">Faculty
+                  St. John's University
+                  demo@dst.com
+                  Medical Health Science</p>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="Images/people.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Somnath</h5>
+                <p class="card-text">Faculty
+                  St. John's University
+                  demo@dst.com
+                  Medical Health Science</p>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="Images/people.jpg" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Somnath</h5>
+                <p class="card-text">Faculty
+                  St. John's University
+                  demo@dst.com
+                  Medical Health Science</p>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="Images/people.jpg" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Somnath</h5>
+                <p class="card-text">Faculty
+                  St. John's University
+                  demo@dst.com
+                  Medical Health Science</p>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="main">
-      <div class="copy-container">
-        <h1>HELLO WORLD<span>.</span></h1>
-        <h2>Let's learn to code</h2>
-      </div>
-      
-      <div class="contents">
-        <h3 class="section-title">Lessons</h3>
-        <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg">
-          <p>HTML & CSS</p>
-        </div>
-        <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/php.svg">
-          <p>PHP</p>
-        </div>
-        <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/ruby.svg">
-          <p>Ruby</p>
-        </div>
-        <div class="contents-item">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/swift.svg">
-          <p>Swift</p>
-        </div>
-      </div>
-      
-      <div class="contact-form">
-        <h3 class="section-title">Contact us</h3>
-        <p>Email (Required)</p>
-        <!-- Add an <input> tag -->
-        <input>
-        
-        <p>Message (Required)</p>
-        <!-- Add a <textarea> tag --> 
-        <textarea></textarea>
-        
-        <p>* Required fields must be filled</p>
-        <!-- Add an <input> tag -->
-        <input class="contact-submit" type="submit" value="Send">
-        
-      </div>
-    </div>
+    <div class="contact-form">
+      <h3 class="section-title">Contact us</h3>
+      <p>Email (Required)</p>
+      <input>
 
-    <div class="footer">
-      <div class="footer-logo">Progate</div>
-      <div class="footer-list">
-        <ul>
-          <li>About</li>
-          <li>Jobs</li>
-          <li>Contact us</li>
-        </ul>
-      </div>
+      <p>Message (Required)</p>
+      <textarea></textarea>
+
+      <p>* Required fields must be filled</p>
+      <input class="contact-submit" type="submit" value="Send">
+
     </div>
-  </body>
+  </div>
+
+  <div class="footer-1">
+    <div class="footer-logo-1">Ministry of Science And Technology</div>
+    <div class="footer-list-1">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
 </html>
